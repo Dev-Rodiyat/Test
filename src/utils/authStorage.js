@@ -1,4 +1,3 @@
-// utils/authStorage.js
 export const saveUserToStorage = (user, token, remember = false) => {
     const storage = remember ? localStorage : sessionStorage;
     storage.setItem("user", JSON.stringify(user));

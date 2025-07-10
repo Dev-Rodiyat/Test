@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { IoClose } from "react-icons/io5";
 import Loader from "../../Spinners/Loader";
-// import UsingHooks from "../../Payment/UsingHooks";
-// import PaystackCheckout from "../../Payment/PaystackCheckout";
+import UsingHooks from "../../Payment/UsingHooks";
+import PaystackCheckout from "../../Payment/PaystackCheckout";
 import api from "../../../utils/api";
 
 const PurchaseTicketModal = ({ onClose, tickets, event, user }) => {
@@ -185,7 +185,7 @@ const PurchaseTicketModal = ({ onClose, tickets, event, user }) => {
             </div>
 
             {/* Payment Components */}
-            {/* {selectedPayment === "flutterwave" &&
+            {selectedPayment === "flutterwave" &&
               selectedTicketEntries.length > 0 && (
                 <UsingHooks
                   user={user}
@@ -202,7 +202,7 @@ const PurchaseTicketModal = ({ onClose, tickets, event, user }) => {
                   selectedTickets={selectedTicketsArray} // updated to array
                   tickets={tickets}
                 />
-              )} */}
+              )}
 
             {/* Summary */}
             <div className="mt-3 text-sm">

@@ -85,8 +85,7 @@ const EventView = () => {
     navigate(location.state?.from || "/dashboard");
   };
 
-  const { user, isAuthenticated } = useSelector((state) => state.user);
-  // console.log({ user });
+  const { user } = useSelector((state) => state.user);
 
   const { eventDetails, loading, error } = useSelector((state) => state.events);
 
@@ -98,7 +97,7 @@ const EventView = () => {
 
     const handleEventDetails = async () => {
       try {
-        if (user && isAuthenticated) {
+        if (user) {
           dispatch(getEventDetails(eventId));
           dispatch(getUserTickets());
         }
@@ -383,7 +382,7 @@ const EventView = () => {
 
               <div className="flex items-center gap-3 mt-2">
                 <img
-                  src={user?.photo?.imageUrl}
+                  src={user?.photo?.imageUrl || user?.photo}
                   className="w-8 h-8 rounded-full object-cover"
                   alt="You"
                 />

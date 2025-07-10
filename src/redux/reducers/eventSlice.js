@@ -31,6 +31,7 @@ export const getEventDetails = createAsyncThunk(
       const response = await api.get(`/event/getEvent/${eventId}`, {
         withCredentials: true,
       });
+      console.log({response})
       return response.data;
     } catch (error) {
       console.log(
