@@ -5,6 +5,8 @@ import { Link, useLocation } from "react-router-dom";
 const navTitle = [
   { url: "/", title: "Home" },
   { url: "/about", title: "About" },
+  { url: "/events", title: "Explore events" },
+  { url: "/create", title: "Create event" },
   { url: "/blog", title: "Blog" },
 ];
 
@@ -20,7 +22,6 @@ const NavModal = ({ onClose }) => {
           <IoClose size={25} className="text-zinc-800 dark:text-zinc-200" />
         </div>
 
-        {/* Navigation Links */}
         <ul className="lg:hidden items-center md:space-y-10 space-y-6 pl-16 font-inter font-semibold md:font-bold md:text-3xl text-2xl pb-5">
           {navTitle.map(({ url, title }, index) => (
             <li key={index}>
