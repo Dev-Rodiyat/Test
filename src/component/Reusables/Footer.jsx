@@ -19,7 +19,6 @@ const Footer = () => {
       </p>
     </div>
     <div className="flex lg:gap-20 md:gap-10 gap-12">
-      {/* About Section */}
       <div className="flex flex-col gap-6">
         <div className="font-lora lg:font-semibold font-medium lg:text-lg md:text-base text-sm">
           About
@@ -37,7 +36,6 @@ const Footer = () => {
         </ul>
       </div>
 
-      {/* Blog Section */}
       <div className="flex flex-col gap-6">
         <div className="font-lora lg:font-semibold font-medium lg:text-lg md:text-base text-sm">
           Blog
@@ -55,7 +53,6 @@ const Footer = () => {
         </ul>
       </div>
 
-      {/* Event Section */}
       <div className="flex flex-col gap-6">
         <div className="font-lora lg:font-semibold font-medium lg:text-lg md:text-base text-sm">
           Event

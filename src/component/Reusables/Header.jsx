@@ -69,7 +69,6 @@ const Header = () => {
   return (
     <header className="w-full fixed top-0 left-0 z-30 bg-orange-50 dark:bg-zinc-900 shadow-md font-inter">
       <nav className="flex items-center justify-between px-4 sm:px-6 md:px-10 py-3 sm:py-3 border-b border-orange-200 dark:border-zinc-700 backdrop-blur-md">
-        {/* Left - Menu & Active Link */}
         <div className="flex items-center gap-2">
           <button
             onClick={toggleModal(setModalOpen)}
@@ -97,7 +96,6 @@ const Header = () => {
           </ul>
         </div>
 
-        {/* Right - Notification & Profile */}
         <div className="flex items-center gap-6">
           <button
             onClick={handleToggle}
@@ -142,7 +140,6 @@ const Header = () => {
         </div>
       </nav>
 
-      {/* Modals */}
       {modalOpen && (
         <Sidebar onClose={toggleModal(setModalOpen)} isOpen={modalOpen} />
       )}

@@ -18,7 +18,7 @@ const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
-  const { user } = useSelector((state) => state.user);
+  // const { user } = useSelector((state) => state.user);
 
   const openModal = () => {
     setModalOpen(true);
@@ -71,7 +71,6 @@ const NavBar = () => {
             : {}
         }
       >
-        {/* Logo Section */}
         <div>
           <div className="flex-shrink-0">
             <Link to="/">
@@ -89,9 +88,7 @@ const NavBar = () => {
           </div>
         </div>
 
-        {/* Navigation and Actions Container */}
         <div className="flex items-center gap-4 sm:gap-6 md:gap-8 lg:gap-16">
-          {/* Navigation Links */}
           <ul className="hidden lg:flex items-center space-x-6 xl:space-x-8 font-inter font-semibold text-sm xl:text-base">
             {navTitle.map(({ url, title }, index) => (
               <li key={index}>
@@ -112,9 +109,8 @@ const NavBar = () => {
             ))}
           </ul>
 
-          {/* Action Buttons */}
           <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
-            {user ? (
+            {/* {user ? (
               <Link to="/dashboard">
                 <div className="border border-orange-500 shadow-md shadow-orange-100 dark:shadow-zinc-800 rounded-full px-2 py-1 flex gap-1 items-center dark:border-orange-400">
                   <p className="dark:text-white">{user.email}</p>
@@ -127,7 +123,7 @@ const NavBar = () => {
                   </div>
                 </div>
               </Link>
-            ) : (
+            ) : ( */}
               <>
                 <Link to="/login">
                   <button
@@ -148,8 +144,7 @@ const NavBar = () => {
                   </button>
                 </Link>
               </>
-            )}
-            {/* Mobile Menu Button */}
+            {/* )} */}
             <button className="lg:hidden" onClick={openModal}>
               <IoMdMenu
                 className={`text-2xl sm:text-3xl transition-all duration-700 ease-in-out hover:bg-orange-100 dark:hover:bg-zinc-700 cursor-pointer p-4 h-14 w-14 rounded-lg ${
