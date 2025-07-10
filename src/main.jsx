@@ -21,12 +21,6 @@ createRoot(document.getElementById("root")).render(
           <PersistGate loading={null} persistor={persistor}>
             <ToastContainer
               position="top-right"
-              toastClassName="dark:bg-zinc-700 dark:text-white bg-white text-black"
-              bodyClassName="text-sm"
-              hideProgressBar={false}
-              autoClose={3000}
-              closeOnClick
-              pauseOnHover
             />
             <App />
           </PersistGate>
